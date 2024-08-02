@@ -5,11 +5,11 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-800">
       <div className="container flex">
-        <div className="relative items-center hidden px-8 py-4 cursor-pointer bg-primary md:flex group">
+        <div className="relative items-center hidden px-8 py-4 cursor-pointer bg-primary sm:flex group">
           <span className="text-white">
             <FaBars />
           </span>
-          <span className="hidden ml-2 text-white capitalize">
+          <span className="hidden text-white capitalize ml-0-2 md:block">
             All Categories
           </span>
 
@@ -87,32 +87,32 @@ const Navbar = () => {
         <div className="flex items-center justify-between flex-grow py-5 md:pl-12">
           <div className="flex items-center space-x-6 capitalize">
             <Link
-              href="index.html"
+              href="/"
               className="text-gray-200 transition hover:text-white"
             >
               Home
             </Link>
             <Link
-              href="pages/shop.html"
+              href="/shop"
               className="text-gray-200 transition hover:text-white"
             >
               Shop
             </Link>
             <Link
-              href="#"
+              href="/about"
               className="text-gray-200 transition hover:text-white"
             >
               About us
             </Link>
             <Link
-              href="#"
+              href="/contact"
               className="text-gray-200 transition hover:text-white"
             >
               Contact us
             </Link>
           </div>
           <Link
-            href="pages/login.html"
+            href="/login"
             className="text-gray-200 transition hover:text-white"
           >
             Login
