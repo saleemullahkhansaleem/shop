@@ -22,28 +22,28 @@ const ProfileSidebar = () => (
     <div className="p-4 mt-6 space-y-4 text-gray-600 bg-white divide-y divide-gray-200 rounded shadow">
       <div className="pl-8 space-y-1">
         <Link
-          href="#"
+          href="/shop/profile"
           className="relative block font-medium capitalize transition text-primary"
         >
           <span className="absolute top-0 text-base -left-8">
             <FaAddressCard />
           </span>
-          Manage account
-        </Link>
-        <Link
-          href="#"
-          className="relative block capitalize transition hover:text-primary"
-        >
           Profile information
         </Link>
         <Link
-          href="#"
+          href="/shop/profile/account"
+          className="relative block capitalize transition hover:text-primary"
+        >
+          Manage account
+        </Link>
+        <Link
+          href="/shop/profile"
           className="relative block capitalize transition hover:text-primary"
         >
           Manage addresses
         </Link>
         <Link
-          href="#"
+          href="/shop/profile"
           className="relative block capitalize transition hover:text-primary"
         >
           Change password
@@ -52,7 +52,7 @@ const ProfileSidebar = () => (
 
       <div className="pt-4 pl-8 space-y-1">
         <Link
-          href="#"
+          href="/shop/profile"
           className="relative block font-medium capitalize transition hover:text-primary"
         >
           <span className="absolute top-0 text-base -left-8">
@@ -61,19 +61,19 @@ const ProfileSidebar = () => (
           My order history
         </Link>
         <Link
-          href="#"
+          href="/shop/profile"
           className="relative block capitalize transition hover:text-primary"
         >
           My returns
         </Link>
         <Link
-          href="#"
+          href="/shop/profile"
           className="relative block capitalize transition hover:text-primary"
         >
           My Cancellations
         </Link>
         <Link
-          href="#"
+          href="/shop/profile"
           className="relative block capitalize transition hover:text-primary"
         >
           My reviews
@@ -82,7 +82,7 @@ const ProfileSidebar = () => (
 
       <div className="pt-4 pl-8 space-y-1">
         <Link
-          href="#"
+          href="/shop/profile"
           className="relative block font-medium capitalize transition hover:text-primary"
         >
           <span className="absolute top-0 text-base -left-8">
@@ -91,7 +91,7 @@ const ProfileSidebar = () => (
           Payment methods
         </Link>
         <Link
-          href="#"
+          href="/shop/profile"
           className="relative block capitalize transition hover:text-primary"
         >
           voucher
@@ -100,7 +100,7 @@ const ProfileSidebar = () => (
 
       <div className="pt-4 pl-8 space-y-1">
         <Link
-          href="#"
+          href="/shop/profile/wishlist"
           className="relative block font-medium capitalize transition hover:text-primary"
         >
           <span className="absolute top-0 text-base -left-8">
@@ -112,7 +112,7 @@ const ProfileSidebar = () => (
 
       <div className="pt-4 pl-8 space-y-1">
         <Link
-          href="#"
+          href="/"
           className="relative block font-medium capitalize transition hover:text-primary"
         >
           <span className="absolute top-0 text-base -left-8">

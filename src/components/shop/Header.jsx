@@ -20,14 +20,14 @@ const Header = () => {
             className="hidden w-full py-3 pl-12 pr-3 border border-r-0 border-primary rounded-l-md focus:outline-none md:flex"
             placeholder="search"
           />
-          <button className="hidden px-8 text-white transition border bg-primary border-primary rounded-r-md hover:bg-transparent hover:text-primary md:flex">
+          <button className="hidden px-8 py-3 text-white transition border bg-primary border-primary rounded-r-md hover:bg-transparent hover:text-primary md:flex">
             Search
           </button>
         </div>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center gap-x-6">
           <Link
-            href="#"
+            href="/shop/profile/wishlist"
             className="relative text-center text-gray-700 transition hover:text-primary"
           >
             <div className="text-2xl">
@@ -39,7 +39,7 @@ const Header = () => {
             </div>
           </Link>
           <Link
-            href="#"
+            href="/shop/checkout"
             className="relative text-center text-gray-700 transition hover:text-primary"
           >
             <div className="text-2xl">
@@ -51,7 +51,7 @@ const Header = () => {
             </div>
           </Link>
           <Link
-            href="#"
+            href="/shop/profile"
             className="relative text-center text-gray-700 transition hover:text-primary"
           >
             <div className="text-2xl">

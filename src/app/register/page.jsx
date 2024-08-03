@@ -108,7 +108,7 @@ const register = () => (
 
       <p className="mt-4 text-center text-gray-600">
         Already have account?{" "}
-        <a href="login.html" className="text-primary">
+        <a href="/login" className="text-primary">
           Login now
         </a>
       </p>
