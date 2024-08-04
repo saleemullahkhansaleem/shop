@@ -8,7 +8,7 @@ const Banner = () => {
     >
       <div className="container">
         <h1 className="mb-4 text-6xl font-medium text-gray-800 capitalize">
-          best collection for <br /> home decoration
+          best collection for <br /> Smart Devices
         </h1>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam{" "}
