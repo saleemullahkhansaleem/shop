@@ -12,7 +12,10 @@ const Footer = () => {
       <footer className="pt-16 pb-12 bg-white border-t border-gray-100">
         <div className="container grid grid-cols-1 ">
           <div className="col-span-1 space-y-4">
-            <img src="/images/logo.svg" alt="logo" className="w-30" />
+            {/* <img src="/images/logo.svg" alt="logo" className="w-30" /> */}
+            <h1 className="text-3xl text-black uppercase font-medium">
+              <span className="text-primary">Mr </span>Saleem
+            </h1>
             <div className="mr-2">
               <p className="text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,

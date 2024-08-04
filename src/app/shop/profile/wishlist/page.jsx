@@ -5,14 +5,14 @@ const wishlist = () => (
     <div className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
       <div className="w-28">
         <img
-          src="/images/products/product6.jpg"
+          src="/images/products/product-6.webp"
           alt="product 6"
           className="w-full"
         />
       </div>
       <div className="w-1/3">
         <h2 className="text-xl font-medium text-gray-800 uppercase">
-          Italian L shape
+          Air Birds
         </h2>
         <p className="text-sm text-gray-500">
           Availability: <span className="text-green-600">In Stock</span>
@@ -34,14 +34,14 @@ const wishlist = () => (
     <div className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
       <div className="w-28">
         <img
-          src="/images/products/product5.jpg"
+          src="/images/products/product-5.webp"
           alt="product 6"
           className="w-full"
         />
       </div>
       <div className="w-1/3">
         <h2 className="text-xl font-medium text-gray-800 uppercase">
-          Dining Table
+          Computer
         </h2>
         <p className="text-sm text-gray-500">
           Availability: <span className="text-green-600">In Stock</span>
@@ -63,13 +63,13 @@ const wishlist = () => (
     <div className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
       <div className="w-28">
         <img
-          src="/images/products/product10.jpg"
+          src="/images/products/product-3.webp"
           alt="product 6"
           className="w-full"
         />
       </div>
       <div className="w-1/3">
-        <h2 className="text-xl font-medium text-gray-800 uppercase">Sofa</h2>
+        <h2 className="text-xl font-medium text-gray-800 uppercase">Tablet</h2>
         <p className="text-sm text-gray-500">
           Availability: <span className="text-red-600">Out of Stock</span>
         </p>

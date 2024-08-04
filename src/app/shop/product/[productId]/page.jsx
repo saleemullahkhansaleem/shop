@@ -4,7 +4,15 @@ import { products } from "@/data/products";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
-import { FaStar } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaHeart,
+  FaInstagram,
+  FaShoppingBag,
+  FaShoppingCart,
+  FaStar,
+  FaTwitter,
+} from "react-icons/fa";
 
 const productDetail = () => {
   const { productId } = useParams();
@@ -22,27 +30,27 @@ const productDetail = () => {
           />
           <div className="grid grid-cols-5 gap-4 mt-4">
             <img
-              src="/images/products/product2.jpg"
+              src="/images/products/product-2.webp"
               alt="product2"
               className="w-full border cursor-pointer border-primary"
             />
             <img
-              src="/images/products/product3.jpg"
+              src="/images/products/product-3.webp"
               alt="product2"
               className="w-full border cursor-pointer"
             />
             <img
-              src="/images/products/product4.jpg"
+              src="/images/products/product-4.webp"
               alt="product2"
               className="w-full border cursor-pointer"
             />
             <img
-              src="/images/products/product5.jpg"
+              src="/images/products/product-5.webp"
               alt="product2"
               className="w-full border cursor-pointer"
             />
             <img
-              src="/images/products/product6.jpg"
+              src="/images/products/product-6.webp"
               alt="product2"
               className="w-full border cursor-pointer"
             />
@@ -180,13 +188,13 @@ const productDetail = () => {
               href="#"
               className="flex items-center gap-2 px-8 py-2 font-medium text-white uppercase transition border rounded bg-primary border-primary hover:bg-transparent hover:text-primary"
             >
-              <i className="fa-solid fa-bag-shopping"></i> Add to cart
+              <FaShoppingBag /> Add to cart
             </Link>
             <Link
               href="#"
               className="flex items-center gap-2 px-8 py-2 font-medium text-gray-600 uppercase transition border border-gray-300 rounded hover:text-primary"
             >
-              <i className="fa-solid fa-heart"></i> Wishlist
+              <FaHeart /> Wishlist
             </Link>
           </div>
 
@@ -195,19 +203,19 @@ const productDetail = () => {
               href="#"
               className="flex items-center justify-center w-8 h-8 text-gray-400 border border-gray-300 rounded-full hover:text-gray-500"
             >
-              <i className="fa-brands fa-facebook-f"></i>
+              <FaFacebook />
             </Link>
             <Link
               href="#"
               className="flex items-center justify-center w-8 h-8 text-gray-400 border border-gray-300 rounded-full hover:text-gray-500"
             >
-              <i className="fa-brands fa-twitter"></i>
+              <FaTwitter />
             </Link>
             <Link
               href="#"
               className="flex items-center justify-center w-8 h-8 text-gray-400 border border-gray-300 rounded-full hover:text-gray-500"
             >
-              <i className="fa-brands fa-instagram"></i>
+              <FaInstagram />
             </Link>
           </div>
         </div>
