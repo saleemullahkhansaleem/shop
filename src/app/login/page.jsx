@@ -61,7 +61,7 @@ const login = () => (
         </div>
       </form>
 
-      {/* <!-- login with --> */}
+      {/*  login with  */}
       <div className="relative flex justify-center mt-6">
         <div className="relative z-10 px-3 text-gray-600 uppercase bg-white">
           Or login with
@@ -82,12 +82,12 @@ const login = () => (
           google
         </Link>
       </div>
-      {/* <!-- ./login with --> */}
+      {/*  ./login with  */}
 
       <p className="mt-4 text-center text-gray-600">
-        Don't have account?{" "}
+        Don't have account?
         <Link href="/register" className="text-primary">
-          Register now
+           Register now
         </Link>
       </p>
     </div>

@@ -14,7 +14,7 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
-const productDetail = () => {
+const ProductDetail = () => {
   const { productId } = useParams();
   const [quantity, setQuantity] = useState(1);
   const productDetail = products?.find((p) => p.id === +productId);
@@ -79,29 +79,39 @@ const productDetail = () => {
                 <FaStar />
               </span>
             </div>
-            <div className="ml-3 text-xs text-gray-500">(150 Reviews)</div>
+            <div className="ml-3 text-xs text-gray-500">
+              ({productDetail?.reviewCount})
+            </div>
           </div>
           <div className="space-y-2">
             <p className="space-x-2 font-semibold text-gray-800">
-              <span>Availability: </span>
-              <span className="text-green-600">In Stock</span>
-            </p>
-            <p className="space-x-2">
-              <span className="font-semibold text-gray-800">Brand: </span>
-              <span className="text-gray-600">Apex</span>
+              <span>Brand: </span>
+              <span className="text-green-600">Apple</span>
             </p>
             <p className="space-x-2">
               <span className="font-semibold text-gray-800">Category: </span>
-              <span className="text-gray-600">Sofa</span>
+              <span className="text-gray-600">Laptop</span>
+            </p>
+            {/* <p className="space-x-2">
+              <span className="font-semibold text-gray-800">RAM: </span>
+              <span className="text-gray-600">8 GB</span>
             </p>
             <p className="space-x-2">
-              <span className="font-semibold text-gray-800">SKU: </span>
-              <span className="text-gray-600">BE45VGRT</span>
-            </p>
+              <span className="font-semibold text-gray-800">Memory: </span>
+              <span className="text-gray-600">256 GB SSD</span>
+            </p> */}
           </div>
           <div className="flex items-baseline mt-4 mb-1 space-x-2 font-roboto">
-            <p className="text-xl font-semibold text-primary">$45.00</p>
-            <p className="text-base text-gray-400 line-through">$55.00</p>
+            <p className="text-xl font-semibold text-primary">
+              $
+              {Math.round(
+                (productDetail?.price / 100) * (100 - productDetail?.discount)
+              )}
+              .00
+            </p>
+            <p className="text-base text-gray-400 line-through">
+              ${productDetail?.price}
+            </p>
           </div>
 
           {/* <p className="mt-4 text-gray-600">
@@ -112,9 +122,9 @@ const productDetail = () => {
           </p> */}
 
           <div className="pt-4">
-            <h3 className="mb-1 text-sm text-gray-800 uppercase">Size</h3>
+            <h3 className="mb-1 text-sm text-gray-800 uppercase">RAM</h3>
             <div className="flex items-center gap-2">
-              {["XS", "S", "M", "L", "XL"].map((item, index) => (
+              {["4 GB", "8 GB", "16 GB"].map((item, index) => (
                 <div className="size-selector" key={index}>
                   <input
                     type="radio"
@@ -124,7 +134,30 @@ const productDetail = () => {
                   />
                   <label
                     htmlFor={`size-${item}`}
-                    className="flex items-center justify-center w-6 h-6 text-xs text-gray-600 border border-gray-200 rounded-sm shadow-sm cursor-pointer"
+                    className="flex items-center justify-center h-6 p-4 text-xs text-gray-600 border border-gray-200 rounded-sm shadow-sm cursor-pointer"
+                  >
+                    {item}
+                  </label>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="pt-4">
+            <h3 className="mb-1 text-sm text-gray-800 uppercase">
+              Screen Size
+            </h3>
+            <div className="flex items-center gap-2">
+              {['12.5"', '13.5"', '14.5"', '15.5"'].map((item, index) => (
+                <div className="size-selector" key={index}>
+                  <input
+                    type="radio"
+                    name={`size`}
+                    id={`size-${item}`}
+                    className="hidden"
+                  />
+                  <label
+                    htmlFor={`size-${item}`}
+                    className="flex items-center justify-center h-6 p-4 text-xs text-gray-600 border border-gray-200 rounded-sm shadow-sm cursor-pointer"
                   >
                     {item}
                   </label>
@@ -295,4 +328,4 @@ const productDetail = () => {
   );
 };
 
-export default productDetail;
+export default ProductDetail;
