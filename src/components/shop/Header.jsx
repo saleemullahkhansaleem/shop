@@ -16,7 +16,7 @@ const Header = () => {
             className="w-32"
           /> */}
           <h1 className="text-3xl font-medium text-black uppercase whitespace-nowrap">
-            <span className="text-primary">Mr </span>Saleem
+            <span className="text-primary">MY </span>Store
           </h1>
         </Link>
 
