@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const wishlist = () => (
   <div className="col-span-9 space-y-4">
     <div className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
       <div className="w-28">
-        <img
+        <Image
           src="/images/products/product-6.webp"
           alt="product 6"
           className="w-full"
@@ -33,7 +34,7 @@ const wishlist = () => (
 
     <div className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
       <div className="w-28">
-        <img
+        <Image
           src="/images/products/product-5.webp"
           alt="product 6"
           className="w-full"
@@ -62,7 +63,7 @@ const wishlist = () => (
 
     <div className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
       <div className="w-28">
-        <img
+        <Image
           src="/images/products/product-3.webp"
           alt="product 6"
           className="w-full"

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const login = () => (
+const Login = () => (
   <div className="py-16 contain">
     <div className="max-w-lg px-6 mx-auto overflow-hidden rounded shadow py-7">
       <h2 className="mb-1 text-2xl font-medium uppercase">Login</h2>
@@ -87,11 +87,11 @@ const login = () => (
       <p className="mt-4 text-center text-gray-600">
         Don't have account?
         <Link href="/register" className="text-primary">
-           Register now
+          Register now
         </Link>
       </p>
     </div>
   </div>
 );
 
-export default login;
+export default Login;

@@ -1,6 +1,7 @@
 "use client";
 import ProductCard from "@/components/shop/ProductCard";
 import { products } from "@/data/products";
+import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
@@ -9,7 +10,6 @@ import {
   FaHeart,
   FaInstagram,
   FaShoppingBag,
-  FaShoppingCart,
   FaStar,
   FaTwitter,
 } from "react-icons/fa";
@@ -23,33 +23,33 @@ const ProductDetail = () => {
       {/* <!-- product-detail --> */}
       <div className="container grid grid-cols-2 gap-6">
         <div>
-          <img
+          <Image
             src={productDetail?.image}
             alt={productDetail?.name}
             className="w-full"
           />
           {/* <div className="grid grid-cols-5 gap-4 mt-4">
-            <img
+            <Image
               src="/images/products/product-2.webp"
               alt="product2"
               className="w-full border cursor-pointer border-primary"
             />
-            <img
+            <Image
               src="/images/products/product-3.webp"
               alt="product2"
               className="w-full border cursor-pointer"
             />
-            <img
+            <Image
               src="/images/products/product-4.webp"
               alt="product2"
               className="w-full border cursor-pointer"
             />
-            <img
+            <Image
               src="/images/products/product-5.webp"
               alt="product2"
               className="w-full border cursor-pointer"
             />
-            <img
+            <Image
               src="/images/products/product-6.webp"
               alt="product2"
               className="w-full border cursor-pointer"
@@ -255,60 +255,6 @@ const ProductDetail = () => {
       </div>
       {/* <!-- ./product-detail --> */}
 
-      {/* <!-- description --> */}
-      {/* <div className="container pb-16">
-        <h3 className="pb-3 font-medium text-gray-800 border-b border-gray-200 font-roboto">
-          Product details
-        </h3>
-        <div className="w-3/5 pt-6">
-          <div className="text-gray-600">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              necessitatibus deleniti natus dolore cum maiores suscipit optio
-              itaque voluptatibus veritatis tempora iste facilis non aut
-              sapiente dolor quisquam, ex ab.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum,
-              quae accusantium voluptatem blanditiis sapiente voluptatum. Autem
-              ab, dolorum assumenda earum veniam eius illo fugiat possimus illum
-              dolor totam, ducimus excepturi.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-              quia modi ut expedita! Iure molestiae labore cumque nobis quasi
-              fuga, quibusdam rem? Temporibus consectetur corrupti rerum
-              veritatis numquam labore amet.
-            </p>
-          </div>
-
-          <table className="w-full mt-6 text-sm text-left text-gray-600 border-collapse table-auto">
-            <tbody>
-              <tr>
-                <th className="w-40 px-4 py-2 font-medium border border-gray-300">
-                  Color
-                </th>
-                <th className="px-4 py-2 border border-gray-300 ">
-                  Blank, Brown, Red
-                </th>
-              </tr>
-              <tr>
-                <th className="w-40 px-4 py-2 font-medium border border-gray-300">
-                  Material
-                </th>
-                <th className="px-4 py-2 border border-gray-300 ">Latex</th>
-              </tr>
-              <tr>
-                <th className="w-40 px-4 py-2 font-medium border border-gray-300">
-                  Weight
-                </th>
-                <th className="px-4 py-2 border border-gray-300 ">55kg</th>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div> */}
-      {/* <!-- ./description --> */}
 
       {/* <!-- related product --> */}
       <div className="container pb-16">

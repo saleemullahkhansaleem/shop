@@ -15,7 +15,7 @@ export default function Home() {
       <NewArrival />
       <div className="container pb-16">
         <Link href="#">
-          <img src="/images/offer.jpg" alt="ads" className="w-full" />
+          <Image src="/images/offer.jpg" alt="ads" className="w-full" />
         </Link>
       </div>
       <Products />

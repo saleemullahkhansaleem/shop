@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   FaFacebookSquare,
@@ -12,8 +13,8 @@ const Footer = () => {
       <footer className="pt-16 pb-12 bg-white border-t border-gray-100">
         <div className="container grid grid-cols-1 ">
           <div className="col-span-1 space-y-4">
-            {/* <img src="/images/logo.svg" alt="logo" className="w-30" /> */}
-            <h1 className="text-3xl text-black uppercase font-medium">
+            {/* <Image src="/images/logo.svg" alt="logo" className="w-30" /> */}
+            <h1 className="text-3xl font-medium text-black uppercase">
               <span className="text-primary">Mr </span>Saleem
             </h1>
             <div className="mr-2">
@@ -165,7 +166,7 @@ const Footer = () => {
         <div className="container flex items-center justify-between">
           <p className="text-white">&copy; Mr Saleem - All Right Reserved</p>
           <div>
-            <img src="/images/methods.png" alt="methods" className="h-5" />
+            <Image src="/images/methods.png" alt="methods" className="h-5" />
           </div>
         </div>
       </div>

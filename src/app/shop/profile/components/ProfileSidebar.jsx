@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaAddressCard, FaCreditCard, FaRegHeart } from "react-icons/fa";
@@ -7,7 +8,7 @@ const ProfileSidebar = () => (
   <div className="col-span-3">
     <div className="flex items-center gap-4 px-4 py-3 shadow">
       <div className="flex-shrink-0">
-        <img
+        <Image
           src="/images/avatar.png"
           alt="profile"
           className="object-cover p-1 border border-gray-200 rounded-full w-14 h-14"

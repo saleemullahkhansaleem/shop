@@ -1,4 +1,5 @@
 import { categories } from "@/data/categories";
+import Image from "next/image";
 import Link from "next/link";
 
 const Categories = () => {
@@ -7,13 +8,13 @@ const Categories = () => {
       <h2 className="mb-6 text-2xl font-medium text-gray-800 uppercase">
         shop by category
       </h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
         {categories.map((category) => (
           <div
             key={category?.id}
             className="relative overflow-hidden rounded-sm group"
           >
-            <img
+            <Image
               src={category?.image}
               alt={category?.name + " Category"}
               className="w-full"

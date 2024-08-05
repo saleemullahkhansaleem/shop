@@ -1,10 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   FaHeart,
-  FaRegHeart,
   FaRegUser,
   FaSearch,
-  FaShoppingBag,
   FaShoppingCart,
 } from "react-icons/fa";
 
@@ -13,8 +12,8 @@ const Header = () => {
     <header className="py-4 bg-white shadow-sm">
       <div className="container flex items-center justify-between">
         <Link href="/">
-          {/* <img src="/images/logo.svg" alt="Logo" className="w-32" /> */}
-          <h1 className="text-3xl text-black uppercase font-medium">
+          {/* <Image src="/images/logo.svg" alt="Logo" className="w-32" /> */}
+          <h1 className="text-3xl font-medium text-black uppercase">
             <span className="text-primary">Mr </span>Saleem
           </h1>
         </Link>
@@ -45,7 +44,7 @@ const Header = () => {
               <FaHeart className="mx-auto" />
             </div>
             {/* <div className="text-xs leading-3">Wishlist</div> */}
-            <div className="absolute -right-3 flex items-center justify-center w-5 h-5 text-xs text-white rounded-full -top-2 bg-primary">
+            <div className="absolute flex items-center justify-center w-5 h-5 text-xs text-white rounded-full -right-3 -top-2 bg-primary">
               8
             </div>
           </Link>
