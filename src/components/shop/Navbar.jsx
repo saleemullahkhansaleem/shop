@@ -1,5 +1,8 @@
+"use client";
+
 import { categories } from "@/data/categories";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaBars, FaCar, FaMobile } from "react-icons/fa";
 
 const Navbar = () => {
@@ -21,10 +24,12 @@ const Navbar = () => {
       link: "/contact",
     },
   ];
+
+  const pathName = usePathname();
   return (
     <nav className="bg-gray-800">
       <div className="container flex">
-        <div className="relative items-center hidden px-8 py-4 cursor-pointer bg-primary sm:flex gap-2 group z-10">
+        <div className="relative items-center hidden px-8 py-3 cursor-pointer bg-primary sm:flex gap-2 group z-10">
           <span className="text-white">
             <FaBars />
           </span>
@@ -47,13 +52,17 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between flex-grow py-5 md:pl-12">
-          <div className="flex items-center space-x-6 capitalize">
+        <div className="flex items-center justify-between flex-grow py-3 md:pl-12">
+          <div className="flex items-center space-x-4 capitalize">
             {navLink.map((link, index) => (
               <Link
                 key={index}
                 href={link.link}
-                className="text-gray-200 transition hover:text-white"
+                className={`${
+                  pathName === link.link
+                    ? "text-primary"
+                    : "text-gray-400 transition hover:text-white"
+                }`}
               >
                 {link.name}
               </Link>
@@ -61,7 +70,11 @@ const Navbar = () => {
           </div>
           <Link
             href="/login"
-            className="text-gray-200 transition hover:text-white"
+            className={`${
+              pathName === "/login"
+                ? "text-primary"
+                : "text-gray-400 transition hover:text-white"
+            }`}
           >
             Login
           </Link>

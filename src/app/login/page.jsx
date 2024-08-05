@@ -5,7 +5,7 @@ const Login = () => (
     <div className="max-w-lg px-6 mx-auto overflow-hidden rounded shadow py-7">
       <h2 className="mb-1 text-2xl font-medium uppercase">Login</h2>
       <p className="mb-6 text-sm text-gray-600">welcome back customer</p>
-      <form action="#" method="post" autocomplete="off">
+      <form action="#" method="post" autoComplete="off">
         <div className="space-y-2">
           <div>
             <label htmlFor="email" className="block mb-2 text-gray-600">

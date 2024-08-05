@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="col-span-1 space-y-4">
             {/* <Image width={0} height={0}
   sizes="100vw" src="/images/logo.svg" alt="logo" className="w-30" /> */}
-            <h1 className="text-3xl font-medium text-black uppercase">
+            <h1 className="text-3xl font-medium text-black uppercase whitespace-nowrap">
               <span className="text-primary">Mr </span>Saleem
             </h1>
             <div className="mr-2">
@@ -40,8 +40,8 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 col-span-2 gap-4">
-            <div className="grid grid-cols-2 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 col-span-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
               <div>
                 <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
                   Solutions
@@ -100,7 +100,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               <div>
                 <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
                   Solutions
@@ -164,7 +164,7 @@ const Footer = () => {
       </footer>
       {/* <!-- copyright --> */}
       <div className="py-4 bg-gray-800">
-        <div className="container flex items-center justify-between">
+        <div className="container flex flex-col md:flex-row gap-2 items-center justify-between">
           <p className="text-white">&copy; Mr Saleem - All Right Reserved</p>
           <div>
             <Image

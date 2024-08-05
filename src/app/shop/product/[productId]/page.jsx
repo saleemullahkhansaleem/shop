@@ -21,7 +21,7 @@ const ProductDetail = () => {
   return productDetail ? (
     <>
       {/* <!-- product-detail --> */}
-      <div className="container grid grid-cols-2 gap-6">
+      <div className="container grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
           <Image
             width={0}
@@ -31,48 +31,6 @@ const ProductDetail = () => {
             alt={productDetail?.name}
             className="w-full"
           />
-          {/* <div className="grid grid-cols-5 gap-4 mt-4">
-            <Image
-              width={0}
-              height={0}
-              sizes="100vw"
-              src="/images/products/product-2.webp"
-              alt="product2"
-              className="w-full border cursor-pointer border-primary"
-            />
-            <Image
-              width={0}
-              height={0}
-              sizes="100vw"
-              src="/images/products/product-3.webp"
-              alt="product2"
-              className="w-full border cursor-pointer"
-            />
-            <Image
-              width={0}
-              height={0}
-              sizes="100vw"
-              src="/images/products/product-4.webp"
-              alt="product2"
-              className="w-full border cursor-pointer"
-            />
-            <Image
-              width={0}
-              height={0}
-              sizes="100vw"
-              src="/images/products/product-5.webp"
-              alt="product2"
-              className="w-full border cursor-pointer"
-            />
-            <Image
-              width={0}
-              height={0}
-              sizes="100vw"
-              src="/images/products/product-6.webp"
-              alt="product2"
-              className="w-full border cursor-pointer"
-            />
-          </div> */}
         </div>
 
         <div>
@@ -110,14 +68,6 @@ const ProductDetail = () => {
               <span className="font-semibold text-gray-800">Category: </span>
               <span className="text-gray-600">Laptop</span>
             </p>
-            {/* <p className="space-x-2">
-              <span className="font-semibold text-gray-800">RAM: </span>
-              <span className="text-gray-600">8 GB</span>
-            </p>
-            <p className="space-x-2">
-              <span className="font-semibold text-gray-800">Memory: </span>
-              <span className="text-gray-600">256 GB SSD</span>
-            </p> */}
           </div>
           <div className="flex items-baseline mt-4 mb-1 space-x-2 font-roboto">
             <p className="text-xl font-semibold text-primary">
@@ -131,13 +81,6 @@ const ProductDetail = () => {
               ${productDetail?.price}
             </p>
           </div>
-
-          {/* <p className="mt-4 text-gray-600">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eius
-            eum reprehenderit dolore vel mollitia optio consequatur hic
-            asperiores inventore suscipit, velit consequuntur, voluptate
-            doloremque iure necessitatibus adipisci magnam porro.
-          </p> */}
 
           <div className="pt-4">
             <h3 className="mb-1 text-sm text-gray-800 uppercase">RAM</h3>
@@ -241,12 +184,12 @@ const ProductDetail = () => {
             >
               <FaShoppingBag /> Add to cart
             </Link>
-            <Link
+            {/* <Link
               href="#"
               className="flex items-center gap-2 px-8 py-2 font-medium text-gray-600 uppercase transition border border-gray-300 rounded hover:text-primary"
             >
               <FaHeart /> Wishlist
-            </Link>
+            </Link> */}
           </div>
 
           <div className="flex gap-3 mt-4">
@@ -278,8 +221,8 @@ const ProductDetail = () => {
         <h2 className="mb-6 text-2xl font-medium text-gray-800 uppercase">
           Related products
         </h2>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          {products?.slice(0, 4)?.map((product) => (
+        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {products?.slice(0, 6)?.map((product) => (
             <ProductCard key={product?.id} product={product} />
           ))}
         </div>
