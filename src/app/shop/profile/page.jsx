@@ -4,17 +4,17 @@ const profile = () => (
     <div className="space-y-4">
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label htmlhtmlFor="first">First name</label>
+          <label htmlFor="first">First name</label>
           <input type="text" name="first" id="first" className="input-box" />
         </div>
         <div>
-          <label htmlhtmlFor="last">Last name</label>
+          <label htmlFor="last">Last name</label>
           <input type="text" name="last" id="last" className="input-box" />
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label htmlhtmlFor="birthday">Birthday</label>
+          <label htmlFor="birthday">Birthday</label>
           <input
             type="date"
             name="birthday"
@@ -23,7 +23,7 @@ const profile = () => (
           />
         </div>
         <div>
-          <label htmlhtmlFor="gender">Gender</label>
+          <label htmlFor="gender">Gender</label>
           <select name="gender" id="gender" className="input-box">
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -32,11 +32,11 @@ const profile = () => (
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label htmlhtmlFor="email">Email Address</label>
+          <label htmlFor="email">Email Address</label>
           <input type="email" name="email" id="email" className="input-box" />
         </div>
         <div>
-          <label htmlhtmlFor="phone">Phone number</label>
+          <label htmlFor="phone">Phone number</label>
           <input type="text" name="phone" id="phone" className="input-box" />
         </div>
       </div>

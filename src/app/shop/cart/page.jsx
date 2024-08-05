@@ -6,7 +6,10 @@ import { FaTrash } from "react-icons/fa";
 const wishlist = () => (
   <div className="container space-y-4">
     {products?.slice(0, 4)?.map((item) => (
-      <div className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
+      <div
+        className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded"
+        key={item.id}
+      >
         <div className="w-28">
           <Image
             width={0}
