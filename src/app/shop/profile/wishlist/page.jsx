@@ -6,6 +6,9 @@ const wishlist = () => (
     <div className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
       <div className="w-28">
         <Image
+          width={0}
+          height={0}
+          sizes="100vw"
           src="/images/products/product-6.webp"
           alt="product 6"
           className="w-full"
@@ -35,6 +38,9 @@ const wishlist = () => (
     <div className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
       <div className="w-28">
         <Image
+          width={0}
+          height={0}
+          sizes="100vw"
           src="/images/products/product-5.webp"
           alt="product 6"
           className="w-full"
@@ -64,6 +70,9 @@ const wishlist = () => (
     <div className="flex items-center justify-between gap-6 p-4 border border-gray-200 rounded">
       <div className="w-28">
         <Image
+          width={0}
+          height={0}
+          sizes="100vw"
           src="/images/products/product-3.webp"
           alt="product 6"
           className="w-full"

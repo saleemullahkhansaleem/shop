@@ -13,7 +13,8 @@ const Footer = () => {
       <footer className="pt-16 pb-12 bg-white border-t border-gray-100">
         <div className="container grid grid-cols-1 ">
           <div className="col-span-1 space-y-4">
-            {/* <Image src="/images/logo.svg" alt="logo" className="w-30" /> */}
+            {/* <Image width={0} height={0}
+  sizes="100vw" src="/images/logo.svg" alt="logo" className="w-30" /> */}
             <h1 className="text-3xl font-medium text-black uppercase">
               <span className="text-primary">Mr </span>Saleem
             </h1>
@@ -166,7 +167,14 @@ const Footer = () => {
         <div className="container flex items-center justify-between">
           <p className="text-white">&copy; Mr Saleem - All Right Reserved</p>
           <div>
-            <Image src="/images/methods.png" alt="methods" className="h-5" />
+            <Image
+              width={350}
+              height={0}
+              sizes="100vw"
+              src="/images/methods.png"
+              alt="methods"
+              // className="h-5"
+            />
           </div>
         </div>
       </div>

@@ -15,6 +15,9 @@ const Categories = () => {
             className="relative overflow-hidden rounded-sm group"
           >
             <Image
+              width={0}
+              height={0}
+              sizes="100vw"
               src={category?.image}
               alt={category?.name + " Category"}
               className="w-full"

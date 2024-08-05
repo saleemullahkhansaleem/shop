@@ -15,7 +15,14 @@ export default function Home() {
       <NewArrival />
       <div className="container pb-16">
         <Link href="#">
-          <Image src="/images/offer.jpg" alt="ads" className="w-full" />
+          <Image
+            width={0}
+            height={0}
+            sizes="100vw"
+            src="/images/offer.jpg"
+            alt="ads"
+            className="w-full"
+          />
         </Link>
       </div>
       <Products />

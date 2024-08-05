@@ -9,6 +9,9 @@ const ProfileSidebar = () => (
     <div className="flex items-center gap-4 px-4 py-3 shadow">
       <div className="flex-shrink-0">
         <Image
+          width={0}
+          height={0}
+          sizes="100vw"
           src="/images/avatar.png"
           alt="profile"
           className="object-cover p-1 border border-gray-200 rounded-full w-14 h-14"

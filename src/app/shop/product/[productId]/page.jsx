@@ -24,32 +24,50 @@ const ProductDetail = () => {
       <div className="container grid grid-cols-2 gap-6">
         <div>
           <Image
+            width={0}
+            height={0}
+            sizes="100vw"
             src={productDetail?.image}
             alt={productDetail?.name}
             className="w-full"
           />
           {/* <div className="grid grid-cols-5 gap-4 mt-4">
             <Image
+              width={0}
+              height={0}
+              sizes="100vw"
               src="/images/products/product-2.webp"
               alt="product2"
               className="w-full border cursor-pointer border-primary"
             />
             <Image
+              width={0}
+              height={0}
+              sizes="100vw"
               src="/images/products/product-3.webp"
               alt="product2"
               className="w-full border cursor-pointer"
             />
             <Image
+              width={0}
+              height={0}
+              sizes="100vw"
               src="/images/products/product-4.webp"
               alt="product2"
               className="w-full border cursor-pointer"
             />
             <Image
+              width={0}
+              height={0}
+              sizes="100vw"
               src="/images/products/product-5.webp"
               alt="product2"
               className="w-full border cursor-pointer"
             />
             <Image
+              width={0}
+              height={0}
+              sizes="100vw"
               src="/images/products/product-6.webp"
               alt="product2"
               className="w-full border cursor-pointer"
@@ -254,7 +272,6 @@ const ProductDetail = () => {
         </div>
       </div>
       {/* <!-- ./product-detail --> */}
-
 
       {/* <!-- related product --> */}
       <div className="container pb-16">

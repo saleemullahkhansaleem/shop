@@ -5,7 +5,14 @@ import { FaRegHeart, FaSearch, FaStar } from "react-icons/fa";
 const ProductCard = ({ product }) => (
   <div className="overflow-hidden bg-white rounded shadow group">
     <div className="relative">
-      <Image src={product?.image} alt="product 1" className="w-full" />
+      <Image
+        width={0}
+        height={0}
+        sizes="100vw"
+        src={product?.image}
+        alt="product 1"
+        className="w-full"
+      />
       <div className="absolute inset-0 flex items-center justify-center gap-2 transition bg-black opacity-0 bg-opacity-40 group-hover:opacity-100">
         <Link
           href={`/shop/product/${product?.id}`}
