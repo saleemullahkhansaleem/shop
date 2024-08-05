@@ -28,7 +28,7 @@ const productDetail = () => {
             alt={productDetail?.name}
             className="w-full"
           />
-          <div className="grid grid-cols-5 gap-4 mt-4">
+          {/* <div className="grid grid-cols-5 gap-4 mt-4">
             <img
               src="/images/products/product-2.webp"
               alt="product2"
@@ -54,7 +54,7 @@ const productDetail = () => {
               alt="product2"
               className="w-full border cursor-pointer"
             />
-          </div>
+          </div> */}
         </div>
 
         <div>
@@ -104,12 +104,12 @@ const productDetail = () => {
             <p className="text-base text-gray-400 line-through">$55.00</p>
           </div>
 
-          <p className="mt-4 text-gray-600">
+          {/* <p className="mt-4 text-gray-600">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eius
             eum reprehenderit dolore vel mollitia optio consequatur hic
             asperiores inventore suscipit, velit consequuntur, voluptate
             doloremque iure necessitatibus adipisci magnam porro.
-          </p>
+          </p> */}
 
           <div className="pt-4">
             <h3 className="mb-1 text-sm text-gray-800 uppercase">Size</h3>
@@ -223,7 +223,7 @@ const productDetail = () => {
       {/* <!-- ./product-detail --> */}
 
       {/* <!-- description --> */}
-      <div className="container pb-16">
+      {/* <div className="container pb-16">
         <h3 className="pb-3 font-medium text-gray-800 border-b border-gray-200 font-roboto">
           Product details
         </h3>
@@ -274,7 +274,7 @@ const productDetail = () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
       {/* <!-- ./description --> */}
 
       {/* <!-- related product --> */}
@@ -282,7 +282,7 @@ const productDetail = () => {
         <h2 className="mb-6 text-2xl font-medium text-gray-800 uppercase">
           Related products
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {products?.slice(0, 4)?.map((product) => (
             <ProductCard key={product?.id} product={product} />
           ))}
@@ -291,7 +291,7 @@ const productDetail = () => {
       {/* <!-- ./related product --> */}
     </>
   ) : (
-    <div className="text-center text-3xl">No data found!</div>
+    <div className="text-3xl text-center">No data found!</div>
   );
 };
 
