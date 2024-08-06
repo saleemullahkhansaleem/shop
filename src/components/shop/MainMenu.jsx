@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaSearch } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 
 const MainMenu = () => {
@@ -30,7 +30,7 @@ const MainMenu = () => {
     <>
       <div className="text-center md:hidden">
         <button
-          className="hover:text-primary text-white hover:bg-transparent bg-primary border border-primary focus:ring-4 focus:ring-blue-300 rounded-lg p-2 mr-2 mb-2b focus:outline-none block md:hidden"
+          className="hover:text-primary text-gray-700 text-2xl focus:ring-2 focus:ring-gray-400 rounded-lg p-2 focus:outline-none block md:hidden"
           type="button"
           onClick={() => setIsOpen(true)}
         >
@@ -52,17 +52,35 @@ const MainMenu = () => {
           <span className="sr-only">Close menu</span>
         </button>
         <div className="space-y-5 divide-y divide-gray-200 mb-4 flex flex-col justify-around h-full">
-          <div className="mt-12">
+          <div className="divide-y divide-gray-300 divide-dashed">
+            <div className="relative flex w-full max-w-full mb-4 px-2">
+              <input
+                type="text"
+                name="search"
+                id="search"
+                className="w-full py-2 pr-3 border border-r-0 border-primary rounded-l-md focus:outline-none flex"
+                placeholder="write some thing ..."
+              />
+              <button className="flex px-4 py-2 text-white text-xl transition border bg-primary border-primary rounded-r-md hover:bg-transparent hover:text-primary">
+                <FaSearch />
+              </button>
+            </div>
             {navLink.map((link, index) => (
               <div
                 key={index}
                 className={`${
                   pathName === link.link
                     ? "text-white bg-primary"
-                    : "text-gray-600"
+                    : "text-gray-600 hover:bg-gray-100"
                 } space-y-2 py-2 px-4`}
               >
-                <Link href={link.link}>{link.name}</Link>
+                <Link
+                  className="w-full h-full block"
+                  href={link.link}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </Link>
               </div>
             ))}
           </div>
@@ -71,7 +89,13 @@ const MainMenu = () => {
               pathName === "/login" ? "text-white bg-primary" : "text-gray-600"
             } space-y-2 py-2 px-4`}
           >
-            <Link href="/login">Login / Register</Link>
+            <Link
+              className="w-full h-full block"
+              href="/login"
+              onClick={() => setIsOpen(false)}
+            >
+              Login / Register
+            </Link>
           </div>
           {/* <div>
             <h3 className="mb-3 text-xl font-medium text-gray-800 uppercase">

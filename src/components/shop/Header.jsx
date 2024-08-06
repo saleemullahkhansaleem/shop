@@ -5,7 +5,7 @@ import MainMenu from "./MainMenu";
 
 const Header = () => {
   return (
-    <header className="py-4 bg-white shadow-sm">
+    <header className="py-2 md:py-4 bg-white shadow-sm sticky top-0 md:relative z-10">
       <div className="container flex flex-wrap items-center justify-between gap-2">
         <Link href="/" className="order-1">
           {/* <Image
@@ -21,7 +21,7 @@ const Header = () => {
           </h1>
         </Link>
 
-        <div className="relative flex w-full max-w-full md:max-w-xs lg:max-w-xl order-3 md:order-2">
+        <div className="relative w-full max-w-full md:max-w-xs lg:max-w-xl hidden md:flex">
           <span className="absolute text-lg text-gray-400 left-4 top-3">
             <FaSearch />
           </span>
