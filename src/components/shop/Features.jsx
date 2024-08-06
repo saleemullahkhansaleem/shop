@@ -26,7 +26,7 @@ const Features = () => {
       <div className="grid justify-center lg:w-10/12 gap-2 md:gap-6 mx-auto grid-cols-3">
         {features.map((feature) => (
           <div
-            className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-5 px-2 py-2 md:py-6 border rounded-sm border-primary"
+            className="flex flex-col md:flex-row items-center justify-between md:justify-center gap-2 md:gap-5 px-2 py-2 md:py-6 border rounded-sm border-primary"
             key={feature.id}
           >
             <Image
@@ -45,34 +45,6 @@ const Features = () => {
             </div>
           </div>
         ))}
-        {/* <div className="flex items-center justify-center gap-5 px-3 py-6 border rounded-sm border-primary">
-          <Image
-            width={0}
-            height={0}
-            sizes="100vw"
-            src="/images/icons/money-back.svg"
-            alt="Delivery"
-            className="object-contain w-12 h-12"
-          />
-          <div>
-            <h4 className="text-lg font-medium capitalize">Money Rturns</h4>
-            <p className="text-sm text-gray-500">30 days money returs</p>
-          </div>
-        </div>
-        <div className="flex items-center justify-center gap-5 px-3 py-6 border rounded-sm border-primary">
-          <Image
-            width={0}
-            height={0}
-            sizes="100vw"
-            src="/images/icons/service-hours.svg"
-            alt="Delivery"
-            className="object-contain w-12 h-12"
-          />
-          <div>
-            <h4 className="text-lg font-medium capitalize">24/7 Support</h4>
-            <p className="text-sm text-gray-500">Customer support</p>
-          </div>
-        </div> */}
       </div>
     </div>
   );
