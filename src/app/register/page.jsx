@@ -85,7 +85,7 @@ const register = () => (
 
       {/* <!-- login with --> */}
       <div className="relative flex justify-center mt-6">
-        <div className="relative z-10 px-3 text-gray-600 uppercase bg-white">
+        <div className="relative px-3 text-gray-600 uppercase bg-white">
           Or signup with
         </div>
         <div className="absolute left-0 w-full border-b-2 border-gray-200 top-3"></div>

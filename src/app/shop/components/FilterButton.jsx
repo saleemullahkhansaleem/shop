@@ -25,13 +25,6 @@ const FilterButton = () => {
           isOpen ? "" : "-translate-x-full"
         } bg-white w-80`}
       >
-        <h5
-          id="drawer-label"
-          className="inline-flex items-center mb-4 text-base font-semibold text-gray-500"
-        >
-          <FaCircleInfo className="text-lg" />
-          &#160;Info
-        </h5>
         <button
           onClick={() => setIsOpen(false)}
           type="button"
@@ -219,14 +212,14 @@ const FilterButton = () => {
           <Link
             onClick={() => setIsOpen(false)}
             href="#"
-            className="px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-200 rounded-lg focus:outline-none hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200"
+            className="px-4 py-2 text-sm font-medium text-center text-primary bg-white border border-primary rounded-lg focus:outline-none hover:bg-primary hover:text-white focus:z-10 focus:ring-4 focus:ring-gray-200"
           >
             close
           </Link>
           <Link
             onClick={() => setIsOpen(false)}
             href="#"
-            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+            className="inline-flex items-center px-4 py-2 text-sm font-medium text-center hover:text-primary text-white border border-primary hover:bg-white rounded-lg bg-primary focus:ring-4 focus:ring-gray-300"
           >
             Apply &#160; <FaArrowRightLong />
           </Link>

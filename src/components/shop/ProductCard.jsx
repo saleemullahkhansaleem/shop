@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaRegHeart, FaSearch, FaSearchPlus, FaStar } from "react-icons/fa";
 
 const ProductCard = ({ product }) => (
-  <div className="overflow-hidden bg-white rounded shadow group">
+  <div className="overflow-hidden bg-white rounded shadow group flex flex-col">
     <div className="relative">
       <Image
         width={0}
@@ -30,42 +30,44 @@ const ProductCard = ({ product }) => (
         </Link> */}
       </div>
     </div>
-    <div className="px-4 pt-4 pb-3">
+    <div className="px-4 pt-4 pb-3 h-full flex flex-col justify-between">
       <Link href={`/shop/product/${product?.id}`}>
         <h4 className="mb-2 text-lg font-medium text-gray-800 uppercase transition hover:text-primary">
           {product?.name}
         </h4>
       </Link>
-      <div className="flex items-baseline mb-1 space-x-2">
-        <p className="text-lg font-semibold text-primary">
-          ${Math.round((product?.price / 100) * (100 - product?.discount))}.00
-        </p>
-        {product?.discount && (
-          <p className="text-xs text-gray-400 line-through">
-            ${product?.price}
+      <div>
+        <div className="flex items-baseline mb-1 space-x-2">
+          <p className="text-lg font-semibold text-primary">
+            ${Math.round((product?.price / 100) * (100 - product?.discount))}.00
           </p>
-        )}
-      </div>
-      <div className="flex items-center">
-        <div className="flex gap-1 text-sm text-yellow-400">
-          <span>
-            <FaStar />
-          </span>
-          <span>
-            <FaStar />
-          </span>
-          <span>
-            <FaStar />
-          </span>
-          <span>
-            <FaStar />
-          </span>
-          <span>
-            <FaStar />
-          </span>
+          {product?.discount && (
+            <p className="text-xs text-gray-400 line-through">
+              ${product?.price}
+            </p>
+          )}
         </div>
-        <div className="ml-3 text-xs text-gray-500">
-          ({product?.reviewCount})
+        <div className="flex items-center">
+          <div className="flex gap-1 text-sm text-yellow-400">
+            <span>
+              <FaStar />
+            </span>
+            <span>
+              <FaStar />
+            </span>
+            <span>
+              <FaStar />
+            </span>
+            <span>
+              <FaStar />
+            </span>
+            <span>
+              <FaStar />
+            </span>
+          </div>
+          <div className="ml-3 text-xs text-gray-500">
+            ({product?.reviewCount})
+          </div>
         </div>
       </div>
     </div>
