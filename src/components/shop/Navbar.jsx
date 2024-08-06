@@ -27,7 +27,7 @@ const Navbar = () => {
 
   const pathName = usePathname();
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-gray-800 hidden md:block">
       <div className="container flex">
         <div className="relative items-center hidden px-8 py-3 cursor-pointer bg-primary sm:flex gap-2 group z-10">
           <span className="text-white">

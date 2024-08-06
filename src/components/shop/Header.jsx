@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaHeart, FaRegUser, FaSearch, FaShoppingCart } from "react-icons/fa";
+import MainMenu from "./MainMenu";
 
 const Header = () => {
   return (
@@ -73,6 +74,7 @@ const Header = () => {
               2
             </div>
           </Link>
+          <MainMenu />
         </div>
       </div>
     </header>
