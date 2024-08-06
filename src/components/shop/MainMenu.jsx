@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
@@ -29,7 +30,7 @@ const MainMenu = () => {
     <>
       <div className="text-center md:hidden">
         <button
-          className="hover:text-primary text-white hover:bg-transparent bg-primary border border-primary focus:ring-4 focus:ring-blue-300 rounded-lg p-3 mr-2 mb-2b focus:outline-none block md:hidden"
+          className="hover:text-primary text-white hover:bg-transparent bg-primary border border-primary focus:ring-4 focus:ring-blue-300 rounded-lg p-2 mr-2 mb-2b focus:outline-none block md:hidden"
           type="button"
           onClick={() => setIsOpen(true)}
         >
@@ -38,17 +39,10 @@ const MainMenu = () => {
       </div>
       {/* <!-- drawer component --> */}
       <div
-        className={`fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform ${
+        className={`fixed top-0 right-0 z-40 h-screen overflow-y-auto transition-transform shadow-xl ${
           isOpen ? "" : "translate-x-full"
         } bg-white w-80`}
       >
-        {/* <h5
-          id="drawer-label"
-          className="inline-flex items-center mb-4 text-base font-semibold text-gray-500"
-        >
-          <FaCircleInfo className="text-lg" />
-          &#160;Info
-        </h5> */}
         <button
           onClick={() => setIsOpen(false)}
           type="button"
@@ -57,23 +51,29 @@ const MainMenu = () => {
           <IoMdClose />
           <span className="sr-only">Close menu</span>
         </button>
-        <div className="space-y-5 divide-y divide-gray-200 mb-4">
-          <div>
+        <div className="space-y-5 divide-y divide-gray-200 mb-4 flex flex-col justify-between h-full">
+          <div className="mt-12">
             {navLink.map((link, index) => (
-              <Link
+              <div
                 key={index}
-                href={link.link}
                 className={`${
                   pathName === link.link
-                    ? "text-primary"
-                    : "text-gray-400 transition hover:text-white"
-                }`}
+                    ? "text-white bg-primary"
+                    : "text-gray-600"
+                } space-y-2 py-2 px-4`}
               >
-                {link.name}
-              </Link>
+                <Link href={link.link}>{link.name}</Link>
+              </div>
             ))}
           </div>
-          <div>
+          <div
+            className={`${
+              pathName === "/login" ? "text-white bg-primary" : "text-gray-600"
+            } space-y-2 py-2 px-4`}
+          >
+            <Link href="/login">Login / Register</Link>
+          </div>
+          {/* <div>
             <h3 className="mb-3 text-xl font-medium text-gray-800 uppercase">
               Categories
             </h3>
@@ -245,7 +245,7 @@ const MainMenu = () => {
                 placeholder="max"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
