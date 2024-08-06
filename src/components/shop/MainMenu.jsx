@@ -51,7 +51,7 @@ const MainMenu = () => {
           <IoMdClose />
           <span className="sr-only">Close menu</span>
         </button>
-        <div className="space-y-5 divide-y divide-gray-200 mb-4 flex flex-col justify-between h-full">
+        <div className="space-y-5 divide-y divide-gray-200 mb-4 flex flex-col justify-around h-full">
           <div className="mt-12">
             {navLink.map((link, index) => (
               <div
