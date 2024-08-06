@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Categories = () => {
   return (
-    <div className="container py-16">
+    <div className="container py-12">
       <h2 className="mb-6 text-2xl font-medium text-gray-800 uppercase">
         shop by category
       </h2>

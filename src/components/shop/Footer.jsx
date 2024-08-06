@@ -10,7 +10,7 @@ import {
 const Footer = () => {
   return (
     <>
-      <footer className="pt-16 pb-12 bg-white border-t border-gray-100">
+      <footer className="py-12 bg-white border-t border-gray-100">
         <div className="container grid grid-cols-1 ">
           <div className="col-span-1 space-y-4">
             {/* <Image width={0} height={0}

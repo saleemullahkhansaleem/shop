@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 
 const Products = () => {
   return (
-    <div className="container pb-16">
+    <div className="container pb-12">
       <h2 className="mb-6 text-2xl font-medium text-gray-800 uppercase">
         recomended for you
       </h2>

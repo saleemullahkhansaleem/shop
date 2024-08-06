@@ -13,7 +13,7 @@ export default function Home() {
       <Features />
       <Categories />
       <NewArrival />
-      <div className="container pb-16">
+      <div className="container pb-12">
         <Link href="#">
           <Image
             width={0}
