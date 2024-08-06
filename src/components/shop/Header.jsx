@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="py-2 md:py-4 bg-white shadow sticky top-0 md:relative z-10">
       <div className="container flex flex-wrap items-center justify-between gap-2">
-        <Link href="/" className="order-1">
+        <Link href="/">
           {/* <Image
             width={0}
             height={0}
@@ -37,7 +37,7 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="flex items-center gap-x-6 order-2 md:order-3">
+        <div className="flex items-center gap-x-6">
           {/* <Link
             title="Wishlist"
             href="/shop/profile/wishlist"

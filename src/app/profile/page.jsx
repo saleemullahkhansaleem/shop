@@ -1,5 +1,5 @@
 const profile = () => (
-  <div className="col-span-9 px-6 pt-5 rounded shadow pb-7">
+  <div className="px-6 pt-5 rounded shadow pb-7">
     <h4 className="mb-4 text-lg font-medium capitalize">Profile information</h4>
     <div className="space-y-4">
       <div className="grid grid-cols-2 gap-4">

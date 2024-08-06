@@ -2,12 +2,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FaBars, FaSearch } from "react-icons/fa";
+import { FaBars, FaSearch, FaUser } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 
 const MainMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathName = usePathname();
+  const isLogedIn = true;
   const navLink = [
     {
       name: "Home",
@@ -26,6 +27,23 @@ const MainMenu = () => {
       link: "/contact",
     },
   ];
+  const profileNav = [
+    {
+      name: "Profile",
+      link: "/profile",
+      icon: FaUser,
+    },
+    {
+      name: "Orders",
+      link: "/orders",
+      icon: FaUser,
+    },
+    // {
+    //   name: "Logout",
+    //   link: "/",
+    //   icon: FaArrowRightFromBracket,
+    // },
+  ];
   return (
     <>
       <div className="text-center md:hidden">
@@ -41,7 +59,7 @@ const MainMenu = () => {
       <div
         className={`fixed top-0 right-0 z-40 h-screen overflow-y-auto transition-transform shadow-xl ${
           isOpen ? "" : "translate-x-full"
-        } bg-white w-80`}
+        } bg-white w-80 p-2`}
       >
         <button
           onClick={() => setIsOpen(false)}
@@ -51,11 +69,11 @@ const MainMenu = () => {
           <IoMdClose />
           <span className="sr-only">Close menu</span>
         </button>
-        <div className="space-y-5 divide-y divide-gray-200 mb-4 flex flex-col justify-around h-full">
-          <div className="divide-y divide-gray-300 divide-dashed">
+        <div className="divide-y divide-gray-200 mb-4 flex flex-col justify-around h-full">
+          <div className="space-y-3 divide-y divide-gray-200">
             {/* search bar */}
 
-            <div className="relative flex w-full max-w-full mb-4 px-2">
+            <div className="relative flex w-full max-w-full mb-4">
               <input
                 type="text"
                 name="search"
@@ -69,38 +87,82 @@ const MainMenu = () => {
             </div>
             {/* !search bar */}
 
-            {navLink.map((link, index) => (
-              <div
-                key={index}
-                className={`${
-                  pathName === link.link
-                    ? "text-white bg-primary"
-                    : "text-gray-600 hover:bg-gray-100"
-                } space-y-2 py-2 px-4`}
-              >
-                <Link
-                  className="w-full h-full block"
-                  href={link.link}
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
+            {isLogedIn && (
+              <div className="pt-2">
+                {profileNav.map((link, index) => (
+                  <div
+                    key={index}
+                    className={`${
+                      pathName === link.link
+                        ? "text-white bg-primary"
+                        : "text-gray-600 hover:bg-gray-100"
+                    } space-y-2 py-2 px-4`}
+                  >
+                    <Link
+                      className="w-full h-full block"
+                      href={link.link}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
+            <div className="pt-2">
+              {navLink.map((link, index) => (
+                <div
+                  key={index}
+                  className={`${
+                    pathName === link.link
+                      ? "text-white bg-primary"
+                      : "text-gray-600 hover:bg-gray-100"
+                  } space-y-2 py-2 px-4`}
+                >
+                  <Link
+                    className="w-full h-full block"
+                    href={link.link}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
-          <div
-            className={`${
-              pathName === "/login" ? "text-white bg-primary" : "text-gray-600"
-            } space-y-2 py-2 px-4`}
-          >
-            <Link
-              className="w-full h-full block"
-              href="/login"
-              onClick={() => setIsOpen(false)}
+          {!isLogedIn ? (
+            <div
+              className={`${
+                pathName === "/login"
+                  ? "text-white bg-primary"
+                  : "text-gray-600"
+              } space-y-2 py-2 px-4`}
             >
-              Login / Register
-            </Link>
-          </div>
+              <Link
+                className="w-full h-full block"
+                href="/login"
+                onClick={() => setIsOpen(false)}
+              >
+                Login / Register
+              </Link>
+            </div>
+          ) : (
+            <div
+              className={`${
+                pathName === "/logout"
+                  ? "text-white bg-primary"
+                  : "text-gray-600"
+              } space-y-2 py-2 px-4`}
+            >
+              <Link
+                className="w-full h-full block"
+                href="/logout"
+                onClick={() => setIsOpen(false)}
+              >
+                Logout
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </>
