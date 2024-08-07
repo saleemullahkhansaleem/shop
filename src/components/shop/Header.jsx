@@ -14,7 +14,7 @@ const Header = () => {
             sizes="100vw"
             src="/images/logo.png"
             alt="Logo"
-            className="w-32 sm:w-40 md:w-52 lg:w-64 xl:w-72"
+            className="w-48 md:w-56 lg:w-64 xl:w-72"
           />
           {/* <h1 className="text-3xl font-medium text-black uppercase whitespace-nowrap">
             <span className="text-primary">MY </span>Store
