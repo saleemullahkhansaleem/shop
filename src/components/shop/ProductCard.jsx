@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => (
       </Link>
       <div>
         <div className="flex items-baseline mb-1 space-x-2">
-          <p className="text-lg font-semibold text-primary">
+          <p className="font-semibold text-primary">
             ${Math.round((product?.price / 100) * (100 - product?.discount))}.00
           </p>
           {product?.discount && (

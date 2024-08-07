@@ -4,7 +4,7 @@ import { categories } from "@/data/categories";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaBars, FaCar, FaHistory, FaMobile, FaUser } from "react-icons/fa";
+import { FaBars, FaHistory, FaMobile, FaUser } from "react-icons/fa";
 import { FaArrowRightFromBracket } from "react-icons/fa6";
 
 const Navbar = () => {
