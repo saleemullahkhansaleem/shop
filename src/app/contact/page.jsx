@@ -1,7 +1,7 @@
+import CommingSoon from "@/components/shop/CommingSoon";
+
 const contact = () => (
-  <div className="flex items-center justify-center w-screen min-h-screen text-7xl">
-    Contact (Coming Soon!)
-  </div>
+  <CommingSoon />
 );
 
 export default contact;

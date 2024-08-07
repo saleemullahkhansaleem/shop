@@ -35,7 +35,7 @@ const Navbar = () => {
     },
     {
       name: "Orders",
-      link: "/orders",
+      link: "/profile/orders",
       icon: FaHistory,
     },
     {

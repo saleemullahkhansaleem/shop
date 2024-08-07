@@ -35,7 +35,7 @@ const MainMenu = () => {
     },
     {
       name: "Orders",
-      link: "/orders",
+      link: "/profile/orders",
       icon: FaUser,
     },
     // {

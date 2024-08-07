@@ -62,7 +62,7 @@ const Header = () => {
             <div className="text-xs leading-3">Account</div>
           </Link> */}
           <Link
-            title="Check out"
+            title="Cart"
             href="/shop/cart"
             className="relative text-center text-gray-700 transition hover:text-primary"
           >

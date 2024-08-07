@@ -1,7 +1,5 @@
-const about = () => (
-  <div className="flex items-center justify-center w-screen min-h-screen text-7xl">
-    About (Coming Soon!)
-  </div>
-);
+import CommingSoon from "@/components/shop/CommingSoon";
+
+const about = () => <CommingSoon />;
 
 export default about;

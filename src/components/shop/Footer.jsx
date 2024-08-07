@@ -8,6 +8,8 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
+  const solutions = ["Marketing", "Analitycs", "Commerce", "Insights"];
+  const support = ["Pricing", "Guides", "API Status"];
   return (
     <>
       <footer className="py-12 bg-white border-t border-gray-100">
@@ -48,122 +50,12 @@ const Footer = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 col-span-2 gap-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
-              <div>
-                <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                  Solutions
-                </h3>
-                <div className="mt-4 space-y-4">
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Marketing
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Analitycs
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Commerce
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Insights
-                  </Link>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                  Support
-                </h3>
-                <div className="mt-4 space-y-4">
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Pricing
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Guides
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    API Status
-                  </Link>
-                </div>
-              </div>
+              <NavLink title="Solutions" array={solutions} />
+              <NavLink title="Support" array={support} />
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                  Solutions
-                </h3>
-                <div className="mt-4 space-y-4">
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Marketing
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Analitycs
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Commerce
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Insights
-                  </Link>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
-                  Support
-                </h3>
-                <div className="mt-4 space-y-4">
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Pricing
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    Guides
-                  </Link>
-                  <Link
-                    href="#"
-                    className="block text-base text-gray-500 hover:text-gray-900"
-                  >
-                    API Status
-                  </Link>
-                </div>
-              </div>
+              <NavLink title="Solutions" array={solutions} />
+              <NavLink title="Support" array={support} />
             </div>
           </div>
         </div>
@@ -181,7 +73,6 @@ const Footer = () => {
               sizes="100vw"
               src="/images/methods.png"
               alt="methods"
-              // className="h-5"
             />
           </div>
         </div>
@@ -192,3 +83,24 @@ const Footer = () => {
 };
 
 export default Footer;
+
+const NavLink = ({ title, array }) => {
+  return (
+    <div>
+      <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+        {title}
+      </h3>
+      <div className="mt-4 space-y-4">
+        {array?.map((item, index) => (
+          <Link
+            key={index}
+            href="#"
+            className="block text-base text-gray-500 hover:text-gray-900"
+          >
+            {item}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
