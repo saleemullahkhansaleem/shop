@@ -13,11 +13,17 @@ const Footer = () => {
       <footer className="py-12 bg-white border-t border-gray-100">
         <div className="container grid grid-cols-1 ">
           <div className="col-span-1 space-y-4">
-            {/* <Image width={0} height={0}
-  sizes="100vw" src="/images/logo.svg" alt="logo" className="w-30" /> */}
-            <h1 className="text-3xl font-medium text-black uppercase whitespace-nowrap">
+            <Image
+              width={0}
+              height={0}
+              sizes="100vw"
+              src="/images/logo.png"
+              alt="logo"
+              className="w-64"
+            />
+            {/* <h1 className="text-3xl font-medium text-black uppercase whitespace-nowrap">
               <span className="text-primary">MY </span>Store
-            </h1>
+            </h1> */}
             <div className="mr-2">
               <p className="text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
@@ -165,7 +171,9 @@ const Footer = () => {
       {/* <!-- copyright --> */}
       <div className="py-4 bg-gray-800">
         <div className="container flex flex-col md:flex-row gap-2 items-center justify-between">
-          <p className="text-white">&copy; MY Store - All Right Reserved</p>
+          <p className="text-white">
+            &copy; Tradelink Connect - All Right Reserved
+          </p>
           <div>
             <Image
               width={350}

@@ -5,20 +5,20 @@ import MainMenu from "./MainMenu";
 
 const Header = () => {
   return (
-    <header className="py-2 md:py-4 bg-white shadow sticky top-0 md:relative z-10">
+    <header className="py-2 bg-white shadow sticky top-0 md:relative z-10">
       <div className="container flex flex-wrap items-center justify-between gap-2">
         <Link href="/">
-          {/* <Image
+          <Image
             width={0}
             height={0}
             sizes="100vw"
-            src="/images/logo.svg"
+            src="/images/logo.png"
             alt="Logo"
-            className="w-32"
-          /> */}
-          <h1 className="text-3xl font-medium text-black uppercase whitespace-nowrap">
+            className="w-32 sm:w-40 md:w-52 lg:w-64 xl:w-72"
+          />
+          {/* <h1 className="text-3xl font-medium text-black uppercase whitespace-nowrap">
             <span className="text-primary">MY </span>Store
-          </h1>
+          </h1> */}
         </Link>
 
         <div className="relative w-full max-w-full md:max-w-xs lg:max-w-xl hidden md:flex">
