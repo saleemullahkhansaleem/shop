@@ -9,14 +9,14 @@ const Banner = () => {
       <div className=" bg-black/40 lg:bg-transparent">
         <div className="container py-4 md:py-8 lg:py-16">
           <h1 className="mb-4 text-3xl md:text-6xl font-medium text-white lg:text-gray-800 capitalize">
-            best collection for <br /> Smart Devices
+            best collection <br /> for Laptops
           </h1>
           <p className="text-sm text-gray-400 lg:text-gray-700 md:text-base max-w-72 md:max-w-full">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-            accusantium
+            Discover High-Quality, Affordable Used Laptops - Trusted, Tested,
+            and Ready for You!
             <br />
             <span className="hidden md:block">
-              perspiciatis, sapiente magni eos dolorum ex quos dolores odio
+              Unlock unbeatable value with our top-quality used laptops.
             </span>
           </p>
           <div className="mt-6 md:mt-12">

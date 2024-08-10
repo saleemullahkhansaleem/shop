@@ -9,7 +9,7 @@ const Categories = () => {
         shop by category
       </h2>
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-        {categories.map((category) => (
+        {categories.map((category, index) => (
           <div
             key={category?.id}
             className="relative overflow-hidden rounded-sm group"
@@ -24,10 +24,19 @@ const Categories = () => {
             />
             <Link
               href={category?.link}
-              className="absolute inset-0 flex items-center justify-center text-xl font-medium text-white transition bg-black bg-opacity-40 font-roboto group-hover:bg-opacity-60"
+              className={`absolute inset-0 flex items-center justify-center text-xl font-medium text-white transition bg-black bg-opacity-40 font-roboto group-hover:bg-opacity-60 ${
+                index > 0 && "group-hover:hidden"
+              }`}
             >
               {category?.name}
             </Link>
+            <span
+              className={`hidden absolute inset-0 items-center justify-center text-xl font-medium text-white transition bg-black bg-opacity-40 font-roboto group-hover:bg-opacity-60 ${
+                index > 0 && "group-hover:flex"
+              }`}
+            >
+              Comming Soon!
+            </span>
           </div>
         ))}
       </div>

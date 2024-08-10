@@ -9,10 +9,15 @@ import {
 
 const Footer = () => {
   const solutions = ["Marketing", "Analitycs", "Commerce", "Insights"];
-  const support = ["Pricing", "Guides", "API Status"];
+  const support = [
+    { name: "Home", url: "/" },
+    { name: "Shop", url: "/shop" },
+    { name: "About Us", url: "/about" },
+    { name: "Contact Us", url: "/contact" },
+  ];
   return (
     <>
-      <footer className="py-12 bg-white border-t border-gray-100">
+      <footer className="py-8 bg-white border-t border-gray-100">
         <div className="container grid grid-cols-1 ">
           <div className="col-span-1 space-y-4">
             <Image
@@ -21,41 +26,54 @@ const Footer = () => {
               sizes="100vw"
               src="/images/logo.png"
               alt="logo"
-              className="w-64"
+              className="w-64 mb-8"
             />
             {/* <h1 className="text-3xl font-medium text-black uppercase whitespace-nowrap">
               <span className="text-primary">MY </span>Store
             </h1> */}
-            <div className="mr-2">
+            {/* <div className="mr-2">
               <p className="text-gray-500">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-                hic?
+                Thank you for choosing Tradelink Connect. We're excited to help
+                you find your next laptop!
               </p>
-            </div>
-            <div className="flex space-x-5">
-              <Link href="#" className="text-gray-400 hover:text-gray-500">
-                <FaFacebookSquare />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-gray-500">
-                <FaInstagramSquare />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-gray-500">
-                <FaTwitterSquare />
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-gray-500">
-                <FaGithubSquare />
-              </Link>
-            </div>
+            </div> */}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 col-span-2 gap-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8">
-              <NavLink title="Solutions" array={solutions} />
-              <NavLink title="Support" array={support} />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-sm font-semibold tracking-wider text-gray-500 uppercase">
+                Follow Us
+              </h3>
+              <div className="text-sm mt-4 text-gray-400">
+                <div className="flex space-x-5">
+                  <Link href="#" className="text-gray-400 hover:text-gray-500">
+                    <FaFacebookSquare size={32} />
+                  </Link>
+                  <Link href="#" className="text-gray-400 hover:text-gray-500">
+                    <FaInstagramSquare size={32} />
+                  </Link>
+                  <Link href="#" className="text-gray-400 hover:text-gray-500">
+                    <FaTwitterSquare size={32} />
+                  </Link>
+                  <Link href="#" className="text-gray-400 hover:text-gray-500">
+                    <FaGithubSquare size={32} />
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              <NavLink title="Solutions" array={solutions} />
-              <NavLink title="Support" array={support} />
+            <NavLink title="Quick Links" array={support} />
+            <div>
+              <h3 className="text-sm font-semibold tracking-wider text-gray-500 uppercase">
+                About Us
+              </h3>
+              <div className="text-sm mt-4 text-gray-400">
+                Welcome to Tradelink Connect, your trusted online destination
+                for high-quality used laptops. We understand that finding
+                reliable and affordable technology can be a challenge, which is
+                why we are committed to providing a curated selection of
+                pre-owned laptops that meet your needs without breaking the
+                bank.
+              </div>
             </div>
           </div>
         </div>
@@ -87,17 +105,17 @@ export default Footer;
 const NavLink = ({ title, array }) => {
   return (
     <div>
-      <h3 className="text-sm font-semibold tracking-wider text-gray-400 uppercase">
+      <h3 className="text-sm font-semibold tracking-wider text-gray-500 uppercase">
         {title}
       </h3>
-      <div className="mt-4 space-y-4">
+      <div className="mt-4 space-y-2">
         {array?.map((item, index) => (
           <Link
             key={index}
-            href="#"
+            href={item?.url}
             className="block text-base text-gray-500 hover:text-gray-900"
           >
-            {item}
+            {item?.name}
           </Link>
         ))}
       </div>

@@ -11,17 +11,17 @@ import {
 export const categories = [
   {
     id: 1,
-    name: "Mobile Phones",
-    image: "/images/category/category-1.webp",
-    link: "",
-    icon: FaMobile,
-  },
-  {
-    id: 2,
     name: "Laptops",
     image: "/images/category/category-2.webp",
     link: "",
     icon: FaLaptop,
+  },
+  {
+    id: 2,
+    name: "Mobile Phones",
+    image: "/images/category/category-1.webp",
+    link: "",
+    icon: FaMobile,
   },
   {
     id: 3,
