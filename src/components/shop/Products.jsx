@@ -1,5 +1,6 @@
 import { products } from "@/data/products";
 import ProductCard from "./ProductCard";
+import CardSkeletons from "./skeletons/CardSkeletons";
 
 const Products = () => {
   return (
@@ -11,6 +12,7 @@ const Products = () => {
         {products?.map((product) => (
           <ProductCard key={product?.id} product={product} />
         ))}
+        <CardSkeletons />
       </div>
     </div>
   );
