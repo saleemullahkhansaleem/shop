@@ -17,7 +17,7 @@ export default function SearchBar() {
       </button>
       {/*  drawer component  */}
       <div
-        className={`fixed top-0 left-0 z-10 h-screen p-4 w-full transition-transform ${
+        className={`fixed top-0 left-0 z-10 p-4 w-full transition-transform ${
           isOpen ? "" : "-translate-y-full"
         } bg-white h-28`}
       >
