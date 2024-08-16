@@ -73,7 +73,7 @@ const MainMenu = () => {
           <div className="space-y-3 divide-y divide-gray-200">
             {/* search bar */}
 
-            <div className="relative flex w-full max-w-full mb-4">
+            {/* <div className="relative flex w-full max-w-full mb-4">
               <input
                 type="text"
                 name="search"
@@ -84,7 +84,7 @@ const MainMenu = () => {
               <button className="flex px-4 py-2 text-white text-xl transition border bg-primary border-primary rounded-r-md hover:bg-transparent hover:text-primary">
                 <FaSearch />
               </button>
-            </div>
+            </div> */}
             {/* !search bar */}
 
             {isLogedIn && (
