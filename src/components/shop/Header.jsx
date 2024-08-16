@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaHeart, FaRegUser, FaSearch, FaShoppingCart } from "react-icons/fa";
 import MainMenu from "./MainMenu";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
   return (
-    <header className="py-2 bg-white shadow sticky top-0 md:relative z-10">
+    <header className="py-2 bg-white shadow sticky top-0 md:relative z-20">
       <div className="container flex flex-wrap items-center justify-between gap-2">
         <Link href="/">
           <Image
@@ -21,7 +22,7 @@ const Header = () => {
           </h1> */}
         </Link>
 
-        <div className="relative w-full max-w-full md:max-w-xs lg:max-w-xl hidden md:flex">
+        {/* <div className="relative w-full max-w-full md:max-w-xs lg:max-w-xl hidden md:flex">
           <span className="absolute text-lg text-gray-400 left-4 top-3">
             <FaSearch />
           </span>
@@ -35,7 +36,7 @@ const Header = () => {
           <button className="flex px-6 py-2 text-white transition border bg-primary border-primary rounded-r-md hover:bg-transparent hover:text-primary">
             Search
           </button>
-        </div>
+        </div> */}
 
         <div className="flex items-center gap-x-6">
           {/* <Link
@@ -61,6 +62,8 @@ const Header = () => {
             </div>
             <div className="text-xs leading-3">Account</div>
           </Link> */}
+
+          <SearchBar />
           <Link
             title="Cart"
             href="/shop/cart"
