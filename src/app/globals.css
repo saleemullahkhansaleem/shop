@@ -482,6 +482,10 @@ select:focus {
   border-color: #2563eb;
 }
 
+.accent-primary {
+  accent-color: #fd3d57;
+}
+
 input::-moz-placeholder,
 textarea::-moz-placeholder {
   color: #6b7280;
