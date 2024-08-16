@@ -15,10 +15,10 @@ const Header = () => {
             sizes="100vw"
             src="/images/logo.png"
             alt="Logo"
-            className="w-48 md:w-56 lg:w-64 xl:w-72"
+            className="w-40 md:w-52 lg:w-60 xl:w-72"
           />
         </Link>
-        <div className="flex items-center gap-x-6">
+        <div className="flex items-center gap-x-2 md:gap-x-4">
           <SearchBar />
           <Link
             title="Cart"
