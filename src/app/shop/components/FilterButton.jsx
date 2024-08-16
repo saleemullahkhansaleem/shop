@@ -20,7 +20,7 @@ const FilterButton = () => {
           <FiGrid />
         </button>
       </div>
-      {/* <!-- drawer component --> */}
+      {/*  drawer component  */}
       <div
         className={`fixed top-0 left-0 z-40 h-screen p-4 overflow-y-auto transition-transform ${
           isOpen ? "" : "-translate-x-full"

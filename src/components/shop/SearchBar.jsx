@@ -15,7 +15,7 @@ export default function SearchBar() {
       >
         <FaSearch />
       </button>
-      {/* <!-- drawer component --> */}
+      {/*  drawer component  */}
       <div
         className={`fixed top-0 left-0 z-10 h-screen p-4 w-full transition-transform ${
           isOpen ? "" : "-translate-y-full"
